@@ -12,6 +12,7 @@ import Cart from './Cart/Cart';
 function App() {
   const toolsPromise = fetch("/tools.json").then(res => res.json());
   const [activeTools, setActiveTools] = useState("product");
+  const [carts, setCarts] = useState([]);
   return (
     <>
       
@@ -28,13 +29,13 @@ function App() {
        
      <Suspense fallback={<p>Data Loading</p>}>
      {activeTools === "product" &&
-     <ToolsCards toolsPromise={toolsPromise}>
+     <ToolsCards toolsPromise={toolsPromise} carts={carts} setCarts={setCarts}>
       
      </ToolsCards>}
       
      </Suspense>
 
-  { activeTools === "cart" && <Cart></Cart> }
+  { activeTools === "cart" && <Cart carts={carts} setCarts={setCarts}></Cart> }
 
 
          

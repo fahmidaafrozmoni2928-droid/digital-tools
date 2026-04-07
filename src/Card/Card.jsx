@@ -1,6 +1,9 @@
 import React from "react";
 
-const Card = ({tool}) => {
+const Card = ({tool, carts, setCarts}) => {
+    const handleBuyNowButton = () => {
+        setCarts([...carts, tool]);
+    }
     return (
         <div className="card w-96 bg-base-100 shadow-sm space-y-4">
         <div className="card-body">
@@ -31,14 +34,9 @@ const Card = ({tool}) => {
                   )
               }
            
-           
-           
-           
-           
-            
-          </ul>
+             </ul>
           <div className="mt-6">
-            <button className="btn btn-primary btn-block rounded-full">Buy Now</button>
+            <button onClick={handleBuyNowButton} className="btn btn-primary btn-block rounded-full">Buy Now</button>
           </div>
         </div>
       </div>
