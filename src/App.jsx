@@ -6,7 +6,10 @@ import BannerBottom from './BannerBottom/BannerBottom'
 import Navber from './Navber/Navber'
 import ToolsCards from './ToolsCards/ToolsCards';
 import Cart from './Cart/Cart';
-
+//import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"
+import { ToastContainer } from 'react-toastify';
+import GetStarted from './GetStarted/GetStarted';
 
 
 function App() {
@@ -39,7 +42,22 @@ function App() {
   { activeTools === "cart" && <Cart carts={carts} setCarts={setCarts}></Cart> }
 
 
-         
+
+<GetStarted></GetStarted>
+  <ToastContainer></ToastContainer>
+
+
+
+
+
+
+
+
+
+
+
+
+
  </>
   )
 }

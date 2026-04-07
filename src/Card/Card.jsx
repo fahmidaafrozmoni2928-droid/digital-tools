@@ -1,10 +1,20 @@
 import React from "react";
+import { toast } from "react-toastify/unstyled";
 
 const Card = ({tool, carts, setCarts}) => {
     const handleBuyNowButton = () => {
-        setCarts([...carts, tool]);
-    }
 
+      const found = carts.find((cart) => cart.id === tool.id);
+      if(found){
+        toast.error("product already in cart!");
+        return;
+      }
+        setCarts([...carts, tool]);
+        toast.success("Product added successfully!");
+
+        
+    };
+    
     
     return (
         <div className="card w-96 bg-base-100 shadow-sm space-y-4 ">
@@ -38,7 +48,8 @@ const Card = ({tool, carts, setCarts}) => {
            
              </ul>
           <div className="mt-6">
-            <button onClick={handleBuyNowButton} className="btn btn-primary btn-block rounded-full">Buy Now</button>
+            <button onClick={ handleBuyNowButton} className="btn btn-primary btn-block rounded-full">Buy Now</button>
+            
           </div>
         </div>
       </div>
