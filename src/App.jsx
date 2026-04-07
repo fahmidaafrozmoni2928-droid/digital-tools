@@ -10,6 +10,7 @@ import Cart from './Cart/Cart';
 import "react-toastify/dist/ReactToastify.css"
 import { ToastContainer } from 'react-toastify';
 import GetStarted from './GetStarted/GetStarted';
+import Pricing from './Pricing/Pricing';
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
 
 
 <GetStarted></GetStarted>
+<Pricing></Pricing>
   <ToastContainer></ToastContainer>
 
 
