@@ -1,6 +1,9 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
-const Navber = () => {
+
+const Navber = ({carts, setCarts}) => {
+
+  
     return (
 
 
@@ -23,14 +26,17 @@ const Navber = () => {
     </ul>
   </div>
   <div className="navbar-end space-x-4">
-  <FaShoppingCart size={20} className="rounded-full"></FaShoppingCart>
+  <FaShoppingCart size={20} className="rounded-full">(${carts.length})</FaShoppingCart>
   <button>Login</button>
     <a className="btn rounded-full text-white bg-[#4F39F6]">Get Started</a>
   </div>
 </div>
  
 <hr className="border-b-2 border-gray-200"></hr>
+
+
 </div>
+
 
 
         

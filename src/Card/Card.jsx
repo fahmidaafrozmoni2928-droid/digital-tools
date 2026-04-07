@@ -4,8 +4,10 @@ const Card = ({tool, carts, setCarts}) => {
     const handleBuyNowButton = () => {
         setCarts([...carts, tool]);
     }
+
+    
     return (
-        <div className="card w-96 bg-base-100 shadow-sm space-y-4">
+        <div className="card w-96 bg-base-100 shadow-sm space-y-4 ">
         <div className="card-body">
           <div className="flex justify-end">
           <span className="badge badge-xs badge-warning ">{tool.tag}</span>

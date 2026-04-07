@@ -1,7 +1,7 @@
 import React, { use } from "react";
 import Card from "../Card/Card";
 
-const ToolsCards = ({toolsPromise, carts, setCarts}) => {
+const ToolsCards = ({toolsPromise, carts, setCarts, cartCount, setCartCount}) => {
     const tools = use(toolsPromise);
     console.log(tools);
     return (
@@ -14,7 +14,7 @@ const ToolsCards = ({toolsPromise, carts, setCarts}) => {
             <div className="grid grid-cols-3 space-y-6 gap-x-0">
                 {
                     tools.map(tool => <div className="min-h-100vh flex justify-center items-center ">
-                            <Card tool={tool} carts={carts} setCarts={setCarts}></Card>
+                            <Card tool={tool} carts={carts} setCarts={setCarts} ></Card>
                     </div>)
                 }
             </div>
