@@ -1,0 +1,45 @@
+
+import { Suspense, useState } from 'react';
+import './App.css'
+import Banner from './Banner/Banner'
+import BannerBottom from './BannerBottom/BannerBottom'
+import Navber from './Navber/Navber'
+import ToolsCards from './ToolsCards/ToolsCards';
+import Cart from './Cart/Cart';
+
+
+
+function App() {
+  const toolsPromise = fetch("/tools.json").then(res => res.json());
+  const [activeTools, setActiveTools] = useState("product");
+  return (
+    <>
+      
+     <Navber></Navber>
+     <Banner></Banner> 
+     <BannerBottom></BannerBottom> 
+
+    {/* name of each tab group should be unique */}
+    <div className="tabs tabs-box flex justify-center items-center space-x-4">
+  <input type="radio" name="my_tabs_1" className="tab rounded-full text-white px-7 bg-[#4F39F6]" aria-label="Product" onClick={()=> setActiveTools("product")} defaultChecked />
+  <input type="radio" name="my_tabs_1" className="tab rounded-full px-7 " aria-label="Cart" onClick={()=> setActiveTools("cart")} />
+  
+</div>
+       
+     <Suspense fallback={<p>Data Loading</p>}>
+     {activeTools === "product" &&
+     <ToolsCards toolsPromise={toolsPromise}>
+      
+     </ToolsCards>}
+      
+     </Suspense>
+
+  { activeTools === "cart" && <Cart></Cart> }
+
+
+         
+ </>
+  )
+}
+
+export default App
