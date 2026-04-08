@@ -22,7 +22,7 @@ const ToolsCards = ({toolsPromise, carts, setCarts, activeTools, setActiveTools}
 
 { activeTools === "cart" && <Cart carts={carts} setCarts={setCarts}></Cart> }
      {activeTools === "product" &&
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-y-6 gap-x-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-y-6 gap-x-0 ">
                 {
                     tools.map(tool => <div key={tool.id} className="min-h-100vh flex justify-center items-center ">
                             <Card key={tool.id} tool={tool} carts={carts} setCarts={setCarts}></Card>

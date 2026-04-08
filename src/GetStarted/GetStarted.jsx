@@ -11,7 +11,7 @@ const GetStarted = () => {
           <p className="text-gray-600 text-center">Start using premium digital tools in minutes, not hours.</p>
           </div>
         </div>
-        <div className="pt-20 grid grid-cols-3 ml-20">
+        <div className="pt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ml-20">
             <div className="card-1">
             
 

@@ -1,16 +1,38 @@
-# React + Vite
+# 🚀 DigiTools
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Repository Name: digital-tools
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+DigiTools is a modern web application that showcases a collection of premium digital tools to enhance productivity and creativity. Users can explore tools, view details, and add them to a cart for a seamless experience.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📌 Description
 
-## Expanding the ESLint configuration
+This project is built with a clean and responsive UI where users can browse digital products, switch between product and cart views, and manage selected tools efficiently. It focuses on providing a smooth user experience using modern React features.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Technologies Used
+
+- ⚛️ React.js
+- 🎨 Tailwind CSS
+- 🌼 DaisyUI
+- 🔥 React Toastify (for notifications)
+- 📦 JavaScript (ES6+)
+- 🗂️ JSON (for data management)
+
+---
+
+## ✨ Features
+
+1. 🛒 **Add to Cart System**  
+   Users can add digital tools to the cart with instant toast notifications.
+
+2. 🔄 **Tab-Based Navigation (Product & Cart)**  
+   Smooth toggle between product list and cart view.
+
+3. ⚡ **Dynamic Data Rendering**  
+   Tools are loaded dynamically from JSON using Suspense and modern React hooks.
+
+

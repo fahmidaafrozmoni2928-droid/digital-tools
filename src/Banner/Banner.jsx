@@ -4,8 +4,8 @@ import bannerImg from '../assets/banner.png'
 
 const Banner = () => {
     return (
-        <div className="pt-10 container mx-auto space-x-19 flex">
-            <div className="space-y-6">
+        <div className="pt-10 container mx-auto space-x-25  md:flex">
+            <div className="ml-10 md:space-y-6 ml-0">
            <div className="btn px-20 rounded-full bg-indigo-100 text-indigo-900">
             <span className="w-2 h-2 bg-indigo-500 rounded-full"></span>
             New:  AI -Powered Tools Available
@@ -23,8 +23,8 @@ Explore Products
 </div>
 </div>
 
-<div>
-    <img className="w-130 h-130 shadow-lg" src={bannerImg}></img>
+<div className="mt-15 md:mt-0">
+    <img className="w-10 h-10 md: w-130 h-130 shadow-lg" src={bannerImg}></img>
 </div>
         </div>
 
