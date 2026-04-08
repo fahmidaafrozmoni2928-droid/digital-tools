@@ -11,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css"
 import { ToastContainer } from 'react-toastify';
 import GetStarted from './GetStarted/GetStarted';
 import Pricing from './Pricing/Pricing';
+import Footer from './Footer/Footer';
 
 
 function App() {
@@ -44,9 +45,10 @@ function App() {
 
 
 
-<GetStarted></GetStarted>
-<Pricing></Pricing>
-  <ToastContainer></ToastContainer>
+    <GetStarted></GetStarted>
+     <Pricing></Pricing>
+      <Footer></Footer>
+     <ToastContainer></ToastContainer>
 
 
 
