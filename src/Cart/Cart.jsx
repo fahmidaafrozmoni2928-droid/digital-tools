@@ -35,7 +35,7 @@ const Cart = ({carts, setCarts}) => {
                                 <h1 className="text-xl font-bold">{cart.name}</h1>
                                 <p className="text-gray-600">${cart.price}</p>
                             </div>
-                            <button onClick={()=> handleRemoveBtn(cart)} className="btn text-red-400 justify-end ml-150">Remove</button>
+                            <button onClick={()=> handleRemoveBtn(cart)} className="btn text-red-400  ml-150">Remove</button>
                             </div>
     
                            
