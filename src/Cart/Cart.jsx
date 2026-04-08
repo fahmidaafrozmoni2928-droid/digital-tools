@@ -1,14 +1,17 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import { toast } from "react-toastify";
 const Cart = ({carts, setCarts}) => {
 
     const handleCheckoutBtn = () => {
         setCarts([]);
+        toast.success("Proceeding to checkout...")
     }
 
     const handleRemoveBtn = (item) => {
         const filtered = carts.filter(c => item.id !== c.id );
         setCarts(filtered);
+        toast.success("Product remove")
     }
 
     const totalCount = carts.reduce((sum, cart) => sum + cart.price, 0);

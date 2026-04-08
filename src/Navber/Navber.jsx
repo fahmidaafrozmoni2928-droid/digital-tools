@@ -26,7 +26,11 @@ const Navber = ({carts, setCarts}) => {
     </ul>
   </div>
   <div className="navbar-end space-x-4">
-  <FaShoppingCart size={20} className="rounded-full">(${carts.length})</FaShoppingCart>
+    <div>
+  {carts.length > 0 && <span className="text-red-500 font-bold"> {carts.length} </span> }
+  <FaShoppingCart size={20} className="rounded-full" />
+  
+  </div>
   <button>Login</button>
     <a className="btn rounded-full text-white bg-[#4F39F6]">Get Started</a>
   </div>

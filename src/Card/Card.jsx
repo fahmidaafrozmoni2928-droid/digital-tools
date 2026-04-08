@@ -3,8 +3,9 @@ import { toast } from "react-toastify/unstyled";
 
 const Card = ({tool, carts, setCarts}) => {
     const handleBuyNowButton = () => {
-
-      const found = carts.find((cart) => cart.id === tool.id);
+        
+      const found = carts.find((item) => item.id === tool.id);
+      console.log(found);
       if(found){
         toast.error("product already in cart!");
         return;
@@ -12,7 +13,7 @@ const Card = ({tool, carts, setCarts}) => {
         setCarts([...carts, tool]);
         toast.success("Product added successfully!");
 
-        
+         
     };
     
     
@@ -37,8 +38,8 @@ const Card = ({tool, carts, setCarts}) => {
           </div>
           <ul className="mt-6 flex flex-col gap-2 text-xs text-gray-600">
               {
-                  tool.features.map(feature =>
-                      <li>
+                  tool.features.map((feature, index) => 
+                      <li key={index}>
                       <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
                       <span className="">{feature}</span>

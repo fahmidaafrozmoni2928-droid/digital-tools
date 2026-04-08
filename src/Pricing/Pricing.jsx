@@ -9,7 +9,7 @@ const Pricing = () => {
                 <p className="text-gray-600">Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
             </div>
 
-            <div className="grid grid-cols-3 ml-20 pt-20 rounded-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ml-20 pt-20 rounded-full">
 
             
           <div className="card-1 w-96 bg-[#A2DDFD]/5 shadow-lg rounded-md">
